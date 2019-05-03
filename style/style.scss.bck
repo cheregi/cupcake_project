@@ -1,0 +1,228 @@
+$darkazur:#0C7973;
+$azur: #2a8878;
+$darkpink:#991d42;
+$lightpink:#e782a4;
+$beige:#feebda;
+
+
+$fonttitle: 'Cookie', cursive;
+$fontparagraph: 'Bitter', serif;
+
+* {
+    box-sizing: border-box;
+    text-decoration: 0.3s;
+}
+*:not(input) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    header {
+        background-color: $darkazur;
+        display: flex;
+        .container1 {
+            // display: inline;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            
+            .first {
+                color: $beige;
+            }
+            .second {
+                input {
+                   border-radius: 5px;
+                    background-color: $azur;
+                    color: $beige;
+                    border:1px solid $darkazur;
+                    display: inline-block;
+                    width:50px;
+                }
+            }
+            nav {
+                display: none;
+            }
+        }
+    }
+    main {
+        background-color: $azur;
+        .container2 {
+            text-align: center;
+            .introduction {
+                .title {
+                    h1 {
+                        color: $beige;
+                        font-family: $fonttitle;
+                        font-size: 3rem;
+                        margin: 10px 10px;
+                    }
+                }
+                .description {
+                    p {
+                        color: $beige;
+                        font-family: $fontparagraph;
+                        font-style: italic;
+                        a {
+                            color: $lightpink;
+                        }
+                    }
+                }
+            }
+            .marzipan {
+                display: flex;
+                flex-direction: column;
+               // justify-content: center;
+                .yummies {
+                    h2{
+                        color: $beige;
+                       text-transform: capitalize;
+                       font-family: $fonttitle;
+                       font-size: 3rem;
+                       margin: 10px 10px;
+                    }
+                }
+                .categories {
+                    background-color: $beige;
+                    width: 95%;
+                    margin: auto;
+                    padding: 10px;
+                    margin-bottom: 10px;
+
+                    img {
+                        display: none;
+                    }
+                    h3 {
+                        color: $lightpink;
+                        font-family: $fonttitle;
+                        border-bottom: 1px dashed $lightpink;
+                        font-size: 2rem;
+                        padding-bottom: 10px;
+                    }
+                    p {
+                        margin-top: 10px;
+                        color: $lightpink;
+                        font-family: $fontparagraph;
+                        font-style: italic;
+
+
+                    }
+                }
+            }
+        }
+
+    }
+    footer {
+        color:$beige;
+        font-family: $fontparagraph;
+        background-color: $azur;
+        text-align: center;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
+}
+@media screen and (min-width: 800px) {
+    body {
+        header {
+            .container1 {
+                flex-direction: column;
+               
+                display: flex;
+                margin: auto;
+                width: 100%;
+                align-content: center;
+                .first {
+                    display: none;
+                }
+                .second {
+                    align-self: center;
+                    input {
+                        min-width: 150px;
+                        margin: 10px;
+                        height: 25px;
+                        padding: 5px;
+                        border-radius: 10px;
+                        width: 30%;
+
+                    }
+                }
+                
+                nav {
+                    display: initial;
+                    
+                   text-align: center;
+                    
+                    ul {
+                       justify-content: center;
+                        align-items: center;
+                       background-color: $beige;
+                        display: flex;
+                        height:40px;
+                        li {
+                            list-style: none;
+                            
+                            
+                            a {
+                                font-family: $fontparagraph;
+                                font-style: italic;
+                                text-decoration: none;
+                                color: $darkpink;
+                                font-size: 1rem;
+                                padding: 1rem;
+                                margin: 1rem;
+                            }
+                            a:hover {
+                                color: $lightpink;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        main {
+            .container2 {
+                display: inline-block;
+                // flex-direction: row-reverse;
+                .picture {
+                    float: right;
+                }
+                .introduction {
+                    .title {
+                        h1 {
+                            text-align: left;
+                        }
+                    }
+                    .description {
+                        p  {
+                            text-align: left;
+                            padding-bottom: 50px;
+
+                        }
+                    }
+                    
+                }
+                .marzipan {
+                    display: flex;
+                    .yummies {
+                       
+                    }
+                    div {
+                        width: 95%;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        .categories {
+                            margin: 10px;
+                            width: 47%;
+                            padding: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        // footer {
+
+        // }
+    }
+}

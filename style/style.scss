@@ -1,0 +1,231 @@
+$darkazur:#0C7973;
+$azur: #2a8878;
+$darkpink:#991d42;
+$lightpink:#e782a4;
+$beige:#feebda;
+
+
+$fonttitle: 'Cookie';
+$fontparagraph: 'Bitter';
+
+* {
+    box-sizing: border-box;
+    text-decoration: 0.3s;
+}
+*:not(input) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: $azur;
+    header {
+        background-color: $darkazur;
+    }
+}
+header nav {
+    display: none;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container1 i {
+    font-size: 1.5rem;
+    color: $beige;
+    margin: 5px;
+    align-self: center;
+}
+
+header input {
+    border-radius: 5px;
+    background-color: $azur;
+    color: $beige;
+    border:1px solid $darkazur;
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.container2 {
+    text-align: center;
+}
+.container2  {
+    margin: 15px;
+    h1 {
+        color: $beige;
+        font-family: $fonttitle;
+        font-size: 3rem;
+        margin-top: 30px;
+    }
+    .description p {
+        font-family: $fontparagraph;
+        font-style: italic;
+        color: $beige;
+        margin-top: 20px;
+        
+        a {
+            color: $lightpink;
+        }
+    }
+}
+h2 {
+    color: $beige;
+    font-family: $fonttitle;
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+.categories img {
+    display: none;
+}
+.categories {
+    background-color: $beige;
+    margin: 10px;
+    h3 {
+        color: $lightpink;
+        font-family: $fonttitle;
+        border-bottom: 1px dashed $lightpink;
+        // padding: 20px;
+        font-size: 2rem;
+        padding-top: 50px;
+        // margin-top: 20px;
+        padding-bottom: 10px;
+        text-transform: capitalize;
+    }
+    p {
+        font-family: $fontparagraph;
+        color: $lightpink;
+        font-style: italic;
+        padding: 20px;
+        font-size: 1rem;
+        
+    }
+}
+footer {
+    text-align: center;
+    color: $beige;
+    font-family: $fonttitle;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+@media screen and (min-width: 800px) {
+    .container1 i {
+        display: none;
+    }
+
+    .container1{
+         display: flex;
+         flex-direction: column;
+     }
+
+    .container1 form {
+        justify-content: center;
+        display: flex;
+    }
+    .container1 nav {
+        display: initial;
+        text-align: center;
+    }
+    
+    
+    .container1 ul {
+        justify-content: center;
+        align-items: center;
+        background-color: $beige;
+        display: flex;
+    }
+    
+    .container1 ul li a{
+        font-family: $fontparagraph;
+        display: block;
+        font-style: italic;
+        text-decoration: none;
+        color: $darkpink;
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .container1 li{
+        list-style: none;
+    }
+
+    .container1 a:hover {
+        color: $lightpink;
+    }
+
+    .container2{
+        text-align: left;
+    }
+    
+    .container2 .logo{
+        float: right;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    
+    .container2 .introduction h1{
+        font-size: 4.2rem;
+    }
+
+    .marzipan{
+        text-align: center;
+        h2 {
+            padding-top: 3rem;
+            font-size: 4.2rem;
+        }
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .categories{
+                width: 40%;
+                margin-left: 2rem;
+                margin-right: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container1 form {
+        justify-content: flex-end;
+        display: flex;
+    }
+    .container1 ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .container2 .logo {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        width: 6rem;
+    }
+    .container2 h1 {
+        margin-left: 150px;
+    }
+    .description p {
+        margin-left: 150px;
+        column-count: 2;
+        margin-right: 150px;
+    }
+    .marzipan h2 {
+        margin-top: -50px;
+    }
+    .categories img {
+        display: initial;
+        position: relative;
+        transform: translateY(-50%);
+    }
+
+    .marzipan div .categories{
+        width: 29%;
+    }
+    
+}
